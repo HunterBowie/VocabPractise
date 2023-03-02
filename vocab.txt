@@ -1,44 +1,37 @@
-une affiche: a poster
-une chaise: a chair
-une chambre: a bedroom
-un chandail: a sweater
-un coin: a corner
-une commode: a dresser
-une communauté: a community
-un coussin: a cushion
-un couvre-lit: a comforter
-une couverture: a blanket
-une lampe: a lamp
-un lit: a bed
-les meubles: the furniture
-un miroir: a mirror
-un pantalon: pants
-un placard: a cupboard
-une porte: a door
-un quartier: a neighbourhood
-une résidence: a residence
-des rideaux: curtains
-des stores: blinds
-une tablette: a tablet
-un tapis: a rug
-une télévision: a television
-un oreiller: a pillow
-une étagère: a shelf
-un fauteuil: an armchair
-une fenêtre: a window
-un tiroir: a drawer
-les vêtements: clothing
-à côté de: beside
-à droite de: to the right of
-à gauche de: to the left of
-au-dessus de: above
-au-dessous de: below
-dans: in
-derrière: behind
-devant: in front of
-en face de: across from
-entre: between
-loin de: far from
-près de: close to
-sous: under
-sur: on
+s'aider: to help each other
+s'aimer: to like each other
+s'intéresser à: to be interested in
+s'amuser: to have fun
+se lever: to get up
+se battre: to fight
+se laver: to wash
+se brosser: to brush
+se maquiller: to put make-up on oneself
+se comprendre: to understand each other
+se connaître: to know each other
+se peigner: to comb
+se raser: to shave oneself
+se coiffer: to style one's hair
+se regarder: to watch each other/oneself
+se coucher: to go to bed
+se présenter: to introduce oneself
+se demander: to ask each other
+se rencontrer: to meet each other
+se reposer: to relax
+se dire: to tell each other
+se disputer: to argue
+se respecter: to respect each other
+s'écrire: to write to each other
+se réveiller: to wake up
+s'encourager: to encourage each other
+se saluer: to greet each other
+s'endormir: to fall asleep
+se téléphoner: to phone each other
+s'habiller: to get dressed
+se voir: to see oneself
+se trouver: to be located
+se fâcher: to get angry
+s'entendre: to get along
+se donner: to give oneself
+s'envoyer: to send oneself
+se raconter: to tell oneself

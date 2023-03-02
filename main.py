@@ -6,10 +6,11 @@ import playsound
 
 CURRENT_DIR = path.dirname(__file__)
 
+PLAY_SOUND = True
 
 answers = []
 
-def calc_average():
+def calc_average() -> str:
     return str(round((sum(answers)/len(answers))*100)) + "%"
 
 
@@ -25,14 +26,14 @@ class Vocab:
         random.shuffle(self.vocab)
         self.index = 0
     
-    def translate(self, word):
+    def translate(self, word: str) -> str:
         for fr_word, en_word in self.vocab:
             if word == fr_word:
                 return en_word
             if word == en_word:
                 return fr_word
     
-    def next(self):
+    def next(self) -> list:
         word_pair = self.vocab[self.index]
         self.index += 1
         if self.index == 20:
@@ -71,17 +72,17 @@ class App(tkinter.Tk):
 
         self.show_page(QuestionPage(self))
 
-    def show_page(self, page):
+    def show_page(self, page) -> None:
         page.grid(row = 0, column = 0, sticky ="nsew")
         page.tkraise()
 
 class QuestionPage(tkinter.Frame):
     
-    def __init__(self, controller):
+    def __init__(self, controller: App):
         self.controller = controller
-        self.fr_word = random.choice(vocab.next())
+        self.word: str = random.choice(vocab.next())
         tkinter.Frame.__init__(self, self.controller.container)
-        label = tkinter.ttk.Label(self, text = self.fr_word,
+        label = tkinter.ttk.Label(self, text = self.word,
                                    font = LARGE_FONT)
         label.place(relx=0.5, rely=0.3, anchor=tkinter.CENTER)
 
@@ -96,14 +97,14 @@ class QuestionPage(tkinter.Frame):
         button.place(relx=0.5, rely=0.7, anchor=tkinter.CENTER)
         controller.bind("<Return>", self.on_button_click)
 
-    def on_button_click(self, *args):
-        self.controller.show_page(AnswerPage(self.controller, self.fr_word,
+    def on_button_click(self, *args: tuple) -> None:
+        self.controller.show_page(AnswerPage(self.controller, self.word,
                                              self.text_entry.get()))
 
 
 
 class AnswerPage(tkinter.Frame):
-    def __init__(self, controller, word, answer_given: str):
+    def __init__(self, controller: App, word: str, answer_given: str):
         self.controller = controller
         tkinter.Frame.__init__(self, self.controller.container)
         answer_given = answer_given.lstrip()
@@ -113,14 +114,16 @@ class AnswerPage(tkinter.Frame):
         label_style.configure("BW.TLabel", foreground="green")
         sub_text = f"\"{word}\" is \"{answer_given}\""
         if vocab.translate(word) != answer_given:
-            playsound.playsound(path.join(CURRENT_DIR, "incorrect.mp3"), False)
+            if PLAY_SOUND:
+                playsound.playsound(path.join(CURRENT_DIR, "incorrect.mp3"), False)
             answers.append(0)
             label_text = "Incorrect!"
             label_style.configure("BW.TLabel", foreground="red")
             sub_text = f"The correct answer is \"{vocab.translate(word)}\" not \"{answer_given}\""
         else:
             answers.append(1)
-            playsound.playsound(path.join(CURRENT_DIR, "correct.mp3"), False)
+            if PLAY_SOUND:
+                playsound.playsound(path.join(CURRENT_DIR, "correct.mp3"), False)
 
         self.controller.average.set(calc_average())
 
@@ -136,7 +139,7 @@ class AnswerPage(tkinter.Frame):
         button.place(relx=0.5, rely=0.7, anchor=tkinter.CENTER)
         controller.bind("<Return>", self.on_button_click)
     
-    def on_button_click(self, *args):
+    def on_button_click(self, *args: tuple) -> None:
 
         if vocab.index == 0:
             self.controller.show_page(ResultsPage(self.controller))
@@ -147,7 +150,7 @@ class AnswerPage(tkinter.Frame):
 
 
 class ResultsPage(tkinter.Frame):
-    def __init__(self, controller):
+    def __init__(self, controller: App):
         tkinter.Frame.__init__(self, controller.container)
         self.controller = controller
         label = tkinter.ttk.Label(self, text = "You Finished 20 Questions!", font = LARGE_FONT)
@@ -158,7 +161,7 @@ class ResultsPage(tkinter.Frame):
         button.place(relx=0.5, rely=0.7, anchor=tkinter.CENTER)
         answers.clear()
     
-    def on_button_click(self, *args):
+    def on_button_click(self, *args: tuple) -> None:
         self.controller.question.set("1/20")
         self.controller.average.set("0%")
         self.controller.show_page(QuestionPage(self.controller))

@@ -1,0 +1,44 @@
+une affiche: a poster
+une chaise: a chair
+une chambre: a bedroom
+un chandail: a sweater
+un coin: a corner
+une commode: a dresser
+une communauté: a community
+un coussin: a cushion
+un couvre-lit: a comforter
+une couverture: a blanket
+une lampe: a lamp
+un lit: a bed
+les meubles: the furniture
+un miroir: a mirror
+un pantalon: pants
+un placard: a cupboard
+une porte: a door
+un quartier: a neighbourhood
+une résidence: a residence
+des rideaux: curtains
+des stores: blinds
+une tablette: a tablet
+un tapis: a rug
+une télévision: a television
+un oreiller: a pillow
+une étagère: a shelf
+un fauteuil: an armchair
+une fenêtre: a window
+un tiroir: a drawer
+les vêtements: clothing
+à côté de: beside
+à droite de: to the right of
+à gauche de: to the left of
+au-dessus de: above
+au-dessous de: below
+dans: in
+derrière: behind
+devant: in front of
+en face de: across from
+entre: between
+loin de: far from
+près de: close to
+sous: under
+sur: on
