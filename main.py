@@ -124,6 +124,9 @@ class AnswerPage(tkinter.Frame):
             answers.append(1)
             if PLAY_SOUND:
                 playsound.playsound(path.join(CURRENT_DIR, "correct.mp3"), False)
+            # for vocab_pair in vocab.vocab:
+            #     if word in vocab_pair:
+            #         vocab.vocab.remove(vocab_pair)
 
         self.controller.average.set(calc_average())
 
