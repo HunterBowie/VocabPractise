@@ -42,3 +42,126 @@ loin de: far from
 près de: close to
 sous: under
 sur: on
+
+
+---
+
+adolescent(e): adolescent
+amusant(e): funny
+anglais(e): english
+asiatique: asian
+autochtone: indigenous
+autre: other
+aventureux/euse: adventurous
+beau/bel/belle: beautiful
+bon(ne): good
+canadien(ne): canadian
+chaque: every
+créatif/ive: creative
+culturel(le): cultural
+différent(e): different
+extroverti(e): outgoing
+français(e): french
+gentil(le): kind
+grand(e): large/tall/great
+impressionné(e): impressed
+indépendant(e): independent
+intelligent(e): intelligent
+italien(ne): italien
+jeune: young
+libanais(e): lebanese
+meilleur(e): better
+nouveau/nouvel/nouvelle: new
+parascolaire: extracurricular
+passé(e): last
+portugais(e): portuguese
+préféré(e): favourite
+prochain(e): next
+respectueux/euse: respectful
+responsable: responsible
+sportif/ive: athletic
+sympa: nice
+unique: unique
+
+
+---
+l'ail: garlic
+un aliment: food
+le beurre: butter
+le bifteck: steak
+le bœuf: beef
+une boisson (gazeuse): a drink (pop)
+le café (glace): (iced) coffee
+une carotte: a carrot
+des céréales: cereal
+les cerises: cherries
+le chocolat: chocolate
+le chou: cabbage
+un citron: a lemon
+une collation: a snack
+la confiture: jam
+un cornichon: a pickle
+la crème: cream
+une crêpe: a crepe
+des crevettes: shrimp
+un croissant: a croissant
+le jambon: ham
+le jus: juice
+le lait: milk
+la laitue: lettuce
+un légume: a vegetable
+la limonade: lemonade
+la malbouffe: junk food
+un mets: a dish
+les moules: mussels
+un œuf: an egg
+un oignon: an onion 
+les olives: olives
+un orange: an orange
+les pâtes: pasta
+le plat (principal): (main) dish
+une poire: a pear
+un poisson: a fish
+le poivre: pepper
+une pomme de terre: a 
+
+
+---
+des croustilles: chips
+le (petit) déjeuner: breakfast/lunch
+un dessert: a dessert
+le dîner: lunch/diner
+l'eau: water
+une entrée: an appetizer
+une épice: a spice
+des épinards: spinach
+le poulet: chicken
+la poutine: poutine
+un repas: a meal
+le riz: rice
+le rosbif: roastbeef
+la salade: salad
+la sauce: sauce
+une saucisse: a sausage
+le saumon (fume): (smoked) salmon
+la farine: flour
+des fraises: strawberries
+des friandises: treats
+les frites: fries
+le fromage: cheese
+les fruits de mer: seafood
+un gâteau: a cake
+le homard: lobster
+un hors d'œuvre: appetizer
+l'huile: oil
+un ingrédient: an ingredient
+le sel: salt
+le sorbet: sorbet
+un sous-marin: a sub sandwich
+le sucre: sugar
+une tarte: a pie
+le thé (glace): (ice) tea
+le thon: tuna
+une tomate: a tomato
+la viande: meat
+le yogourt: yogourt

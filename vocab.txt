@@ -1,37 +1,17 @@
-s'aider: to help each other
-s'aimer: to like each other
-s'intéresser à: to be interested in
-s'amuser: to have fun
-se lever: to get up
-se battre: to fight
-se laver: to wash
-se brosser: to brush
-se maquiller: to put make-up on oneself
-se comprendre: to understand each other
-se connaître: to know each other
-se peigner: to comb
-se raser: to shave oneself
-se coiffer: to style one's hair
-se regarder: to watch each other/oneself
-se coucher: to go to bed
-se présenter: to introduce oneself
-se demander: to ask each other
-se rencontrer: to meet each other
-se reposer: to relax
-se dire: to tell each other
-se disputer: to argue
-se respecter: to respect each other
-s'écrire: to write to each other
-se réveiller: to wake up
-s'encourager: to encourage each other
-se saluer: to greet each other
-s'endormir: to fall asleep
-se téléphoner: to phone each other
-s'habiller: to get dressed
-se voir: to see oneself
-se trouver: to be located
-se fâcher: to get angry
-s'entendre: to get along
-se donner: to give oneself
-s'envoyer: to send oneself
-se raconter: to tell oneself
+le (petit) déjeuner: breakfast/lunch
+une entrée: an appetizer
+une épice: a spice
+des épinards: spinach
+une saucisse: a sausage
+le saumon (fume): (smoked) salmon
+la farine: flour
+des fraises: strawberries
+des friandises: treats
+les frites: fries
+les fruits de mer: seafood
+le homard: lobster
+un hors d'œuvre: appetizer
+une tarte: a pie
+le thé (glace): (ice) tea
+le thon: tuna
+une tomate: a tomato

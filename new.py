@@ -75,18 +75,24 @@ class App(tkinter.Tk):
         self.container.grid_rowconfigure(0, weight=1)
         self.container.grid_columnconfigure(0, weight=1)
 
-        self.show_page(QuestionPage(self))
+        self.pages = []
+        for Page in (QuestionPage, AnswerPage, ResultsPage):
+            page = Page(self.container, self)
+            page.grid(row=0, column=0, sticky="nsew")
+            self.pages.append(page)
 
-    def show_page(self, page) -> None:
-        page.grid(row=0, column=0, sticky="nsew")
+        self.show_page(0)
+
+    def show_page(self, page_number) -> None:
+        page = self.pages[page_number]
         page.tkraise()
 
 
 class QuestionPage(tkinter.Frame):
-    def __init__(self, controller: App):
+    def __init__(self, parent, controller: App):
         self.controller = controller
         self.word: str = random.choice(vocab.next())
-        tkinter.Frame.__init__(self, self.controller.container)
+        tkinter.Frame.__init__(self, parent)
         label = tkinter.ttk.Label(self, text=self.word, font=LARGE_FONT)
         label.place(relx=0.5, rely=0.3, anchor=tkinter.CENTER)
 
@@ -101,65 +107,69 @@ class QuestionPage(tkinter.Frame):
         controller.bind("<Return>", self.on_button_click)
 
     def on_button_click(self, *args: tuple) -> None:
-        self.controller.show_page(
-            AnswerPage(self.controller, self.word, self.text_entry.get())
-        )
+        self.controller.pages[1].set_word(self.word)
+        self.controller.pages[1].set_answer(self.text_entry.get())
+        self.controller.show_page(1)
 
 
 class AnswerPage(tkinter.Frame):
-    def __init__(self, controller: App, word: str, answer_given: str):
+    def init(self, parent, controller: App):
         self.controller = controller
-        tkinter.Frame.__init__(self, self.controller.container)
-        answer_given = answer_given.lstrip()
-        answer_given = answer_given.rstrip()
-        label_text = "Correct!"
-        label_style = tkinter.ttk.Style()
-        label_style.configure("BW.TLabel", foreground="green")
-        sub_text = f'"{word}" is "{answer_given}"'
-        if vocab.translate(word) != answer_given:
-            if PLAY_SOUND:
-                playsound.playsound(path.join(CURRENT_DIR, "incorrect.mp3"), False)
-            answers.append(0)
-            label_text = "Incorrect!"
-            label_style.configure("BW.TLabel", foreground="red")
-            sub_text = (
-                f'The correct answer is "{vocab.translate(word)}" not "{answer_given}"'
-            )
-        else:
-            answers.append(1)
-            if PLAY_SOUND:
-                playsound.playsound(path.join(CURRENT_DIR, "correct.mp3"), False)
-            # for vocab_pair in vocab.vocab:
-            #     if word in vocab_pair:
-            #         vocab.vocab.remove(vocab_pair)
+        tkinter.Frame.init(self, parent)
+        self.word_label = tkinter.ttk.Label(self, font=LARGE_FONT)
+        self.word_label.place(relx=0.5, rely=0.3, anchor=tkinter.CENTER)
 
-        self.controller.average.set(calc_average())
-
-        label = tkinter.ttk.Label(
-            self, text=label_text, font=LARGE_FONT, style="BW.TLabel"
-        )
-        label.place(relx=0.5, rely=0.3, anchor=tkinter.CENTER)
-
-        sub_label = tkinter.ttk.Label(self, text=sub_text, font=SMALL_FONT)
-        sub_label.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
+        self.sub_label = tkinter.ttk.Label(self, font=SMALL_FONT)
+        self.sub_label.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
 
         button = tkinter.ttk.Button(self, text="Ok", command=self.on_button_click)
-
         button.place(relx=0.5, rely=0.7, anchor=tkinter.CENTER)
         controller.bind("<Return>", self.on_button_click)
 
+        def set_word(self, word: str) -> None:
+            self.word = word
+            self.word_label["text"] = self.word
+
+        def set_answer(self, answer: str) -> None:
+            self.answer_given = answer.lstrip().rstrip()
+            self.display_feedback()
+
+        def display_feedback(self) -> None:
+            label_text = "Correct!"
+            label_style = tkinter.ttk.Style()
+            label_style.configure("BW.TLabel", foreground="green")
+            sub_text = f'"{self.word}" is "{self.answer_given}"'
+            if vocab.translate(self.word) != self.answer_given:
+                if PLAY_SOUND:
+                    playsound.playsound(path.join(CURRENT_DIR, "incorrect.mp3"), False)
+                answers.append(0)
+                label_text = "Incorrect!"
+                label_style.configure("BW.TLabel", foreground="red")
+                sub_text = f'The correct answer is "{vocab.translate(self.word)}" not "{self.answer_given}"'
+            else:
+                answers.append(1)
+                if PLAY_SOUND:
+                    playsound.playsound(path.join(CURRENT_DIR, "correct.mp3"), False)
+
+            self.controller.average.set(calc_average())
+
+            self.word_label["text"] = label_text
+            self.word_label["style"] = "BW.TLabel"
+            self.sub_label["text"] = sub_text
+
     def on_button_click(self, *args: tuple) -> None:
         if vocab.index == 0:
-            self.controller.show_page(ResultsPage(self.controller))
+            self.controller.show_page(2)
         else:
             question_num = int(self.controller.question.get()[:-3])
             self.controller.question.set(str(question_num + 1) + "/20")
-            self.controller.show_page(QuestionPage(self.controller))
+            self.controller.pages[0].word = random.choice(vocab.next())
+            self.controller.show_page(0)
 
 
 class ResultsPage(tkinter.Frame):
-    def __init__(self, controller: App):
-        tkinter.Frame.__init__(self, controller.container)
+    def init(self, parent, controller: App):
+        tkinter.Frame.init(self, parent)
         self.controller = controller
         label = tkinter.ttk.Label(
             self, text="You Finished 20 Questions!", font=LARGE_FONT
@@ -169,14 +179,6 @@ class ResultsPage(tkinter.Frame):
             self, text=f"Your average was {calc_average()}", font=SMALL_FONT
         )
         sub_label.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
-        button = tkinter.ttk.Button(self, text="again", command=self.on_button_click)
-        button.place(relx=0.5, rely=0.7, anchor=tkinter.CENTER)
-        answers.clear()
-
-    def on_button_click(self, *args: tuple) -> None:
-        self.controller.question.set("1/20")
-        self.controller.average.set("0%")
-        self.controller.show_page(QuestionPage(self.controller))
 
 
 app = App()
