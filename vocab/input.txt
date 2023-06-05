@@ -1,37 +1,32 @@
-s'aider: to help each other
-s'aimer: to like each other
-s'intéresser à: to be interested in
-s'amuser: to have fun
-se lever: to get up
-se battre: to fight
-se laver: to wash
-se brosser: to brush
-se maquiller: to put make-up on oneself
-se comprendre: to understand each other
-se connaître: to know each other
-se peigner: to comb
-se raser: to shave oneself
-se coiffer: to style one's hair
-se regarder: to watch each other/oneself
-se coucher: to go to bed
-se présenter: to introduce oneself
-se demander: to ask each other
-se rencontrer: to meet each other
-se reposer: to relax
-se dire: to tell each other
-se disputer: to argue
-se respecter: to respect each other
-s'écrire: to write to each other
-se réveiller: to wake up
-s'encourager: to encourage each other
-se saluer: to greet each other
-s'endormir: to fall asleep
-se téléphoner: to phone each other
-s'habiller: to get dressed
-se voir: to see oneself
-se trouver: to be located
-se fâcher: to get angry
-s'entendre: to get along
-se donner: to give oneself
-s'envoyer: to send oneself
-se raconter: to tell oneself
+(rec) les ancêtres: ancestors
+un animal de compagnie: a pet
+(rec) un animal en peluche: a stuffed animal
+(rec) un arbre: a tree
+(rec) l'avenir: the future
+une balançoire: a swing
+un blogue: a blog
+la bouffe: food
+(rec) une bougie: a candle
+un cadeau: a present
+une carte: a card
+un casse-tête: a puzzle
+le centre-ville: downtown
+(rec) un cerf-volant: a kite
+(rec) le cœur: the heart
+une collation: a snack
+(rec) la communauté: the community
+(rec) un concours: a competition
+un copain: a friend
+un courriel: an email
+(rec) un coutume: a custom
+(rec) un défilé: a parade
+un dessin: a drawing
+(rec) un dessin animé: a cartoon
+le directeur: the principal
+une émission: a show
+un enseignant: a teacher
+l'enfance: childhood
+un événement: an event
+une fleur: a flower
+un gardien d'enfant: a babysitter
+une glissoire: a slide
