@@ -165,3 +165,37 @@ le thon: tuna
 une tomate: a tomato
 la viande: meat
 le yogourt: yogourt
+
+---
+(rec) les ancêtres: ancestors
+un animal de compagnie: a pet
+(rec) un animal en peluche: a stuffed animal
+(rec) un arbre: a tree
+(rec) l'avenir: the future
+une balançoire: a swing
+un blogue: a blog
+la bouffe: food
+(rec) une bougie: a candle
+un cadeau: a present
+une carte: a card
+un casse-tête: a puzzle
+le centre-ville: downtown
+(rec) un cerf-volant: a kite
+(rec) le cœur: the heart
+une collation: a snack
+(rec) la communauté: the community
+(rec) un concours: a competition
+un copain: a friend
+un courriel: an email
+(rec) un coutume: a custom
+(rec) un défilé: a parade
+un dessin: a drawing
+(rec) un dessin animé: a cartoon
+le directeur: the principal
+une émission: a show
+un enseignant: a teacher
+l'enfance: childhood
+un événement: an event
+une fleur: a flower
+un gardien d'enfant: a babysitter
+une glissoire: a slide

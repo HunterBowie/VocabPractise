@@ -15,9 +15,6 @@ class Controller(tkinter.Tk):
 
     def __init__(self):
         super().__init__()
-
-        self.vocab = Vocab()
-        self.vocab.shuffle()
         self.page: tkinter.Frame = None
 
         self.geometry("750x350")
@@ -41,7 +38,6 @@ class Controller(tkinter.Tk):
         self.container.grid_columnconfigure(0, weight=1)
 
         self.reset()
-
         self.show_page(PageType.QUESTION_PAGE)
 
     def calc_average(self) -> float:
@@ -65,6 +61,8 @@ class Controller(tkinter.Tk):
         self.answers.append(0)
 
     def reset(self):
+        self.vocab = Vocab()
+        self.vocab.shuffle()
         self.answers = []
         self.question.set(f"0/{len(self.vocab)}")
         self.average.set("0%")
